@@ -34,7 +34,7 @@ async function callGeminiWithRetry(ai: any, params: any, maxRetries = 3) {
 }
 
 export async function generateTestMatrix(config: TestConfig): Promise<MatrixRow[]> {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   const prompt = `Hãy thiết kế MA TRẬN ĐỀ KIỂM TRA môn ${config.subject} lớp 5 (Thông tư 27):
   - Tiêu đề: ${config.title}
   - Mạch kiến thức/Chủ điểm: ${config.topics.join(", ")}
